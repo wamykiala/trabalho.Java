@@ -1,0 +1,26 @@
+Esta implementação de Fila de Prioridade tem conceito correto mas erros graves de Java que impedem compilação/execução. Nota: 9/20 (45%).
+
+Erros Críticos (Não Compila)
+public void main → deve ser public static void main
+
+Tarefa é inner class não-estática → não acessível em main estático
+
+Scanner next() após nextInt() → quebra com enter pendente
+
+filaPrioridade não acessível em métodos estáticos
+
+Pontos Positivos
+Conceito de Priority Queue via ArrayList + busca máxima correto
+Menu funcional (se compilasse)
+Classe Tarefa bem estruturada com toString()
+
+Avaliação por Critérios Típicos
+
+| Aspecto               | Pontos | Problema Principal                     |
+| --------------------- | ------ | -------------------------------------- |
+| Estrutura Java        | 1/5    | Não compila (main, inner class)        |
+| Lógica Priority Queue | 4/5    | Correta (busca máxima), O(n) aceitável |
+| Funcionalidades       | 3/5    | Menu, insert, peek, remove OK          |
+| Tratamento Erros      | 1/5    | Sem validação prioridade/input         |
+| Organização           | 2/5    | Boa separação, mas erros básicos       |
+| Total                 | 9/20   | Conceito bom, execução falha           |
