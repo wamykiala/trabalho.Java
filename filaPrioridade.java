@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class filaPrioridade{
 
 
-    class Tarefa{
+    static class Tarefa{
 
         private int id;
         private int prioridade;
@@ -34,29 +34,30 @@ public class filaPrioridade{
         }
         return maior;
     }
-    public void main(String[] args){
+    public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         ArrayList<Tarefa> filaPrioridade = new ArrayList<>();
         int op, id = 1;
         do {
-            System.out.println("MENU");
+            System.out.println("========MENU========");
             System.out.println("1- Inserir Tarefa");
             System.out.println("2- Listar Tarefas");
-            System.out.println("3- Peek");
-            System.out.println("4- Remover");
+            System.out.println("3- Ver tarefa com maior Prioridade");
+            System.out.println("4- Remover tarefa");
             System.out.println("5- Sair");
             System.out.print("Escolha uma Opção: ");
             op = input.nextInt();
 
             switch (op){
                 case 1:
-                    System.out.println("Descrição da Tarefa: ");
+                    System.out.print("Descrição da Tarefa: ");
                     String descricao = input.next();
-                    System.out.println("Prioridade(1-Maior/0-Menor)");
+                    System.out.print("Prioridade(1-Maior/0-Menor)");
                     int prioridade = input.nextInt();
                     Tarefa nova = new Tarefa(id, prioridade, descricao);
                     filaPrioridade.add(nova);
                     id++;
+
                     System.out.println("Tarefa inserida com sucesso.");
                     break;
                 case 2:
